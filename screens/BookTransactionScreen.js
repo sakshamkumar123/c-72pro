@@ -134,3 +134,4 @@ export default class TransactionScreen extends React.Component {
       color:'white'
     }
   });
+
