@@ -21,21 +21,21 @@ export default class App extends React.Component {
 }
 
 const TabNavigator = createBottomTabNavigator({
-  Transaction: { screen: TransactionScreen },
-  Search: { screen: SearchScreen }
+  WriteStory: { screen: TransactionScreen },
+  ReadStory: { screen: SearchScreen }
 },
   {
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ }) => {
         const routeName = navigation.state.routeName
-        if (routeName === 'Transaction') {
+        if (routeName === 'WriteStory') {
           return (
             <Image
               source={require('./assets/book.png')}
               style={{ width: 40, height: 40 }} />
           )
         }
-        else if (routeName === 'Search') {
+        else if (routeName === 'ReadStory') {
           return (
             <Image
               source={require('./assets/searchingbook.png')}
